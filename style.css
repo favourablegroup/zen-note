@@ -1,0 +1,214 @@
+/* Set the container for the cubes to be a flex container */
+html, body {
+    height:100%; 
+    margin:0; 
+    padding:0;
+    background-color:#212121;
+}
+.cubes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    max-height:100%;
+    min-height:100%;
+    height:auto;
+    margin: 0 auto;
+    bottom:0;
+}
+   
+   /* Set the dimensions of the cubes */
+   .cube {
+    position: relative;
+    width: 11vw;
+    height: 10.67vh;
+    line-height: 100%;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    bottom:0;
+    color:#fff;
+   }
+   a{
+    color:#fff;
+   }
+   /* Set the spacing of the cubes */
+   @media (min-width: 768px) {
+    .cube {
+      margin: 20px;
+    }
+   }
+   
+   @media (min-width: 1024px) {
+    .cube {
+      margin: 30px;
+    }
+   }
+   
+   @media (min-width: 1280px) {
+    .cube {
+      margin: 40px;
+    }
+   }
+
+   /* Hide the default UI close button */
+.ui-dialog .ui-dialog-titlebar .ui-button {
+    display: none;
+}
+
+/* Style the custom close button */
+.ui-dialog .ui-dialog-titlebar .custom-close-button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Style the custom close button on hover */
+.ui-dialog .ui-dialog-titlebar .custom-close-button:hover {
+    color: red;
+}
+   .modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    height:50vh;
+    display: none;
+   }
+   .modal-form {
+    text-align: center;
+}
+
+   .modal.show {
+    display: block;
+    opacity: 1;
+   }
+
+   #dialog > div{
+    min-height:420px;
+    width:80%;
+   }
+   .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+    margin-bottom:15px;
+   }
+   .ui-dialog .ui-dialog-content{
+    min-height:457px!important;
+    top:237px;
+    background-color:#212121;
+   }
+   body > div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable{
+    min-height:420px;
+    background-color:#212121;
+   }
+   .ui-widget-content{
+    background:#212121!important;
+    color:#fff!important;
+   }
+   .ui-dialog .ui-dialog-buttonpane{
+    border-width:0px;
+   }
+   .ui-widget-header{
+    color:#fff!important;
+    background:#212121!important;
+   }
+   .ui-widget-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:#000!important;
+    background-size:cover;
+    -webkit-filter: blur(40px)!important;
+    -moz-filter: blur(40px)!important;
+    -ms-filter: blur(40px)!important;
+    -o-filter: blur(40px)!important;
+    filter: blur(40px)!important;
+    opacity:50%;
+    z-index: 1000; /* Adjust the z-index to be above other elements */
+   }
+           /* Style for the modal overlay */
+           .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size:cover;
+            -webkit-filter: blur(4px);
+            -moz-filter: blur(4px);
+            -ms-filter: blur(4px);
+            -o-filter: blur(4px);
+            filter: blur(4px);
+            z-index: 1000; /* Adjust the z-index to be above other elements */
+            display: none; /* Initially hidden */
+        }
+
+        /* Style for the modal content */
+        .modal-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+            height: 80%;
+            transform: translate(-50%, -50%);
+            background: #212121;
+            padding: 20px;
+            z-index: 1001; /* Place it above the overlay */
+        }
+
+        /* Style for the close button */
+        .modal-close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            color:#fff;
+            font-size:36px;
+        }
+
+        .ui-dialog-buttonpane{display:none;}
+
+        .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+            background-color: transparent;
+            border: 1px solid #fff; /* Add a border for visibility */
+            color: #fff; /* Text color */
+            padding: 3px 5px; /* Padding for the button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 36px;
+            cursor: pointer;
+            border-radius: 4px; /* Rounded corners, if desired */
+            font-family:'Segoe UI';
+        }
+
+        #\<\?php\ echo\ \$openDialogID\;\ \?\> {
+            background-color: transparent;
+            border: 0px solid #fff; /* Add a border for visibility */
+            color: #fff; /* Text color */
+            padding: 3px 5px; /* Padding for the button */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 36px;
+            cursor: pointer;
+            border-radius: 4px; /* Rounded corners, if desired */
+            font-family:'Segoe UI';
+        }
+        
+        /* Hover effect (optional) */
+        .transparent-button:hover {
+            background-color: #333; /* Change background color on hover */
+            color: #fff; /* Change text color on hover */
+        }
+        
