@@ -23,54 +23,6 @@
         }
       </script>
     <script>
-    window.addEventListener('beforeinstallprompt', (event) => {
-  // Prevent the default installation prompt
-  event.preventDefault();
-
-  // Display a custom installation prompt to the user
-  // You can show a button or a banner to let users install the app
-  installButton.style.display = 'block';
-
-  installButton.addEventListener('click', () => {
-    // Trigger the installation prompt
-    event.prompt();
-    installButton.style.display = 'none';
-  });
-});
-        // Select the elements and set event listeners
-const installPopup = document.getElementById('install-popup');
-const installButton = document.getElementById('install-button');
-const dismissButton = document.getElementById('dismiss-button');
-
-// Check if the browser supports service workers and the beforeinstallprompt event
-if ('serviceWorker' in navigator && 'beforeinstallprompt' in window) {
-  // The 'beforeinstallprompt' event is available
-
-  // Display the popup
-  installPopup.style.display = 'block';
-
-  // Listen for the user's choice
-  installButton.addEventListener('click', () => {
-    installPopup.style.display = 'none'; // Hide the popup
-    window.deferredPrompt.prompt(); // Show the browser's installation prompt
-  });
-
-  dismissButton.addEventListener('click', () => {
-    installPopup.style.display = 'none'; // Hide the popup
-  });
-
-  // Listen for the 'beforeinstallprompt' event
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault(); // Prevent the default browser installation prompt
-    window.deferredPrompt = e; // Store the event for later use
-  });
-} else {
-  // The 'beforeinstallprompt' event is not available, so hide the popup
-  installPopup.style.display = 'none';
-}
-
-    </script>
-    <script>
         $(document).ready(function() {
             // Initialize the dialog
             $("#dialog").dialog({
