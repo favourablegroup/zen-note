@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body>
+    <script>document.addEventListener('DOMContentLoaded', function () {
+        showPageLoader();
+        
+        // Your other code here
+    });</script>
     <script>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/service-worker.js')
@@ -221,6 +226,38 @@ function closeModal(modalNumber) {
         });
     });</script>
 
+    <script>
+        // Function to show the page loader overlay
+function showPageLoader() {
+    const overlay = document.getElementById('loader-overlay');
+    overlay.style.display = 'flex';
+}
+
+// Function to hide the page loader overlay
+function hidePageLoader() {
+    const overlay = document.getElementById('loader-overlay');
+    overlay.style.display = 'none';
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Add an event listener to the "OK" button to hide the overlay
+    document.getElementById('dismiss-button').addEventListener('click', hidePageLoader);
+});
+
+// You can trigger the page loader when your app loads, e.g., in your main JavaScript code
+// Call showPageLoader() when your app is ready to display the loader.
+// For example, you can call it inside the document.ready function.
+    </script>
+
+    <!-- Page Loader Overlay -->
+    <div id="loader-overlay" class="overlay">
+        <div class="loader-content">
+            <h1>Welcome back to Zen Notes!</h1>
+            <h3>Notes are stored on your device</h3>
+            <h3>The 81 symbols are 2000 year old Chinese tetragrams</h3>
+            <button id="dismiss-button">OK</button>
+        </div>
+    </div>
 
  <div class="cubes">
     <table>      
