@@ -7,10 +7,22 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <title>Notes</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-
   </head>
   <body>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(function(error) {
+              console.error('Service Worker registration failed:', error);
+            });
+        }
+      </script>
+      
     <script>
         $(document).ready(function() {
             // Initialize the dialog
@@ -1507,8 +1519,7 @@
             <button type="submit">Submit</button>
         </form>
     </div>
-</div>
-
-</div>
-</body>
+    </div>
+    </div>
+  </body>
 </html>
