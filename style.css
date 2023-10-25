@@ -29,7 +29,21 @@ html, body {
     margin: 0 auto;
     bottom:0;
     color:#fff;
-   }
+    background: radial-gradient(circle, #ccc, #999, #666, #333);
+    animation: softRadialAnimation 10s linear infinite;
+}
+
+@keyframes softRadialAnimation {
+    0% {
+        background-size: 100% 100%;
+    }
+    50% {
+        background-size: 120% 120%;
+    }
+    100% {
+        background-size: 100% 100%;
+    }
+}
    a{
     color:#fff;
    }
