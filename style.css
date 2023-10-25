@@ -29,21 +29,20 @@ html, body {
     margin: 0 auto;
     bottom:0;
     color:#fff;
-    background: radial-gradient(circle, #ccc, #999, #666, #333);
-    animation: softRadialAnimation 10s linear infinite;
+    background: linear-gradient(135deg, #333, #000, #333, #000, #333);
+    background-size: 400% 400%;
+    animation: pulsatingGradient 16s alternate infinite;
 }
 
-@keyframes softRadialAnimation {
+@keyframes pulsatingGradient {
     0% {
-        background-size: 100% 100%;
-    }
-    50% {
-        background-size: 120% 120%;
+        background-position: 0% 0;
     }
     100% {
-        background-size: 100% 100%;
+        background-position: 100% 100%;
     }
 }
+
    a{
     color:#fff;
    }
@@ -183,7 +182,6 @@ html, body {
         #\<\?php\ echo\ \$openDialogID\;\ \?\> {
             background-color: transparent;
             border: 0px solid #fff; /* Add a border for visibility */
-            color: #fff; /* Text color */
             padding: 3px 5px; /* Padding for the button */
             text-align: center;
             text-decoration: none;
@@ -192,6 +190,18 @@ html, body {
             cursor: pointer;
             border-radius: 4px; /* Rounded corners, if desired */
             font-family:'Segoe UI';
+            color:#fff;
+
+        }
+
+            /* CSS for red outline when the note is empty */
+           .open-dialog-button.red-outline {
+           outline: 1px solid red;
+       }
+
+           /* CSS for green outline when the note is not empty */
+            .open-dialog-button.green-outline {
+            outline: 1px solid green;
         }
         
         /* Hover effect (optional) */
