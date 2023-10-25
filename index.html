@@ -41,8 +41,18 @@
                 $("#dialog").dialog("open");
             });
         });
-    </script>
-    <script>
+        function openModal(modalNumber) {
+    const modal = document.getElementById(`modal-${tdID}`);
+    modal.style.display = "block";
+}
+
+function closeModal(modalNumber) {
+    const modal = document.getElementById(`modal-${tdID}`);
+    modal.style.display = "none";
+}
+
+</script>
+ <script>
         const modal = document.querySelector('#modal');
         const noteInput = document.querySelector('#note-input');
         const saveNoteButton = document.querySelector('#save-note');
@@ -182,7 +192,7 @@
         });
     });</script>
  <div class="cubes">
-    <table>     
+    <table>      
         <tr>
           <td id="1-1" class="cube" style="background-color: #FF0000;">
             <button id="<?php echo $openDialogID; ?>" class="open-dialog-button">𝌆</button></td>
