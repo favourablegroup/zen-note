@@ -12,6 +12,22 @@
   </head>
   <body>
     <script>
+window.addEventListener('beforeinstallprompt', (event) => {
+  // Prevent the default installation prompt
+  event.preventDefault();
+
+  // Display a custom installation prompt to the user
+  // You can show a button or a banner to let users install the app
+  installButton.style.display = 'block';
+
+  installButton.addEventListener('click', () => {
+    // Trigger the installation prompt
+    event.prompt();
+    installButton.style.display = 'none';
+  });
+});
+    </script>
+    <script>
         if ('serviceWorker' in navigator) {
           navigator.serviceWorker.register('/service-worker.js')
             .then(function(registration) {
