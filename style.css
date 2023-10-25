@@ -212,3 +212,23 @@ html, body {
             color: #fff; /* Change text color on hover */
         }
         
+        .install-popup {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            text-align: center;
+            display: none; /* Initially hidden */
+          }
+          
+          .install-popup p {
+            margin: 0;
+          }
+          
+          .install-popup button {
+            margin: 5px;
+          }
+          
