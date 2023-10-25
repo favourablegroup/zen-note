@@ -71,15 +71,17 @@ html, body {
     color: red;
 }
    .modal {
-    position: fixed;
+    display: block;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    width: 300px;
+    max-width: 80%; /* Control the maximum width here */
     background-color: grey;
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     z-index: 999;
     height:50vh;
     display: none;
@@ -101,8 +103,8 @@ html, body {
     margin-bottom:15px;
    }
    .ui-dialog .ui-dialog-content{
-    min-height:457px!important;
-    top:237px;
+    min-height:420px!important;
+    top:220px;
     background-color:#212121;
    }
    body > div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable{
@@ -121,37 +123,9 @@ html, body {
     background:#212121!important;
    }
    .ui-widget-overlay{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background:#000!important;
-    background-size:cover;
-    -webkit-filter: blur(40px)!important;
-    -moz-filter: blur(40px)!important;
-    -ms-filter: blur(40px)!important;
-    -o-filter: blur(40px)!important;
-    filter: blur(40px)!important;
-    opacity:50%;
-    z-index: 1000; /* Adjust the z-index to be above other elements */
+    display:none!important;
    }
-           /* Style for the modal overlay */
-           .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-size:cover;
-            -webkit-filter: blur(4px);
-            -moz-filter: blur(4px);
-            -ms-filter: blur(4px);
-            -o-filter: blur(4px);
-            filter: blur(4px);
-            z-index: 1000; /* Adjust the z-index to be above other elements */
-            display: none; /* Initially hidden */
-        }
+
 
         /* Style for the modal content */
         .modal-content {
@@ -231,4 +205,5 @@ html, body {
           .install-popup button {
             margin: 5px;
           }
-          
+
+        
