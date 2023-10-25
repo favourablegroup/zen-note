@@ -5,7 +5,7 @@ self.addEventListener('install', function(event) {
     caches.open(cacheName).then(function(cache) {
       return cache.addAll([
         '/',
-        'index.htm',
+        'index.html',
         'style.css',
         // Add more files to cache as needed
       ]);
