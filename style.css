@@ -195,6 +195,11 @@ html, body {
 
         }
 
+        #\<\?php\ echo\ \$openDialogID\;\ \?\>:hover {
+            font-size: 1.2em; /* Adjust the size as needed */
+            transition: font-size 0.3s; /* Add a smooth transition effect */
+        }
+
             /* CSS for red outline when the note is empty */
            .open-dialog-button.red-outline {
            outline: 1px solid red;
