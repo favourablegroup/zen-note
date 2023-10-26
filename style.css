@@ -255,16 +255,104 @@ html, body {
 .loader-content {
     text-align: center;
     background: #333;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    -webkit-animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+    animation: puff-in-center 2s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+.loader-content h1{
+    font-family: 'Zen Dots', sans-serif;
+    font-size:65px;
+    padding-bottom:40px;
+	-webkit-animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.loader-content h3{
+	-webkit-animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
 
 #dismiss-button {
-    background: #007bff;
+    background: none;
+    border: 1px solid #fff; /* Add a border for visibility */
     color: #fff;
-    border: none;
+    margin: 20px;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    -webkit-animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: text-focus-in 3.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
 }
+
+/**
+ * ----------------------------------------
+ * animation text-focus-in
+ * ----------------------------------------
+ */
+ @-webkit-keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes text-focus-in {
+    0% {
+      -webkit-filter: blur(12px);
+              filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
+
+/**
+ * ----------------------------------------
+ * animation puff-in-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes puff-in-center {
+    0% {
+      -webkit-transform: scale(2);
+              transform: scale(2);
+      -webkit-filter: blur(4px);
+              filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-filter: blur(0px);
+              filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
