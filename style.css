@@ -119,14 +119,18 @@ html, body {
    .ui-dialog .ui-dialog-content{
     min-height:420px!important;
     top:220px;
-    background-color:#212121;
+    padding: .5em 3em!important;
    }
+
    body > div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable{
     min-height:420px;
-    background-color:#212121;
+    background-color: transparent;
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
+
    }
    .ui-widget-content{
-    background:#212121!important;
+    background:none;
+    backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
     color:#fff!important;
    }
    .ui-dialog .ui-dialog-buttonpane{
@@ -134,12 +138,15 @@ html, body {
    }
    .ui-widget-header{
     color:#fff!important;
-    background:#212121!important;
+    border:none!important;
+    background: rgba(0,0,0,0.2)!important;
    }
    .ui-widget-overlay{
     display:none!important;
    }
-
+   .ui-widget.ui-widget-content{
+    border:none!important;
+   }
 
         /* Style for the modal content */
         .modal-content {
@@ -149,9 +156,11 @@ html, body {
             width: 80%;
             height: 80%;
             transform: translate(-50%, -50%);
-            background: #212121;
-            padding: 20px;
+            padding: 0px;
             z-index: 1001; /* Place it above the overlay */
+        }
+        .ui-dialog{
+            backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
         }
 
         /* Style for the close button */
