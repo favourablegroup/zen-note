@@ -252,11 +252,25 @@ document.addEventListener('DOMContentLoaded', function () {
 // For example, you can call it inside the document.ready function.
     </script>
 
+<script>
+function toggleForm(element) {
+    // Find the parent modal content
+    const modalContent = element.closest(".modal-content");
+    
+    // Find the form with class "modal-form" inside the modal content
+    const modalForm = modalContent.querySelector(".modal-form");
+    
+    // Toggle the form's display style
+    modalForm.style.display = modalForm.style.display === "none" ? "block" : "none";
+}
+
+</script>
+
     <!-- Page Loader Overlay -->
     <div id="loader-overlay" class="overlay">
         <div class ="puff-in-center";>
         <div class="loader-content">
-            <h1>Zen Notes</h1>
+            <h1 class="toggle-form" class="toggle-form" onclick="toggleForm(this)">Zen Notes</h1>
             <h3>Welcome back</h3>
             <h3>Notes are stored on your device</h3>
             <h3>The 81 symbols are 2000 year old Chinese tetragrams</h3>
@@ -454,10 +468,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-1" class="modal" title="𝌆 Note 1">
     <div class="modal-content" id="modal-content-1-1">
         <span class="modal-close-button" id="modal-close-button-1-1">&times;</span>
-        <h1>𝌆</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; " style="cursor: pointer;">𝌆</h1>
         <div id="stored-text-1-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-1">
+<form class="modal-form" id="text-form-1-1">
             <input type="text" id="text-input-1-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -468,10 +481,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-2" class="modal" title="𝌇 Note 2">
     <div class="modal-content" id="modal-content-1-2">
         <span class="modal-close-button" id="modal-close-button-1-2">&times;</span>
-          <h1>𝌇</h1>
+          <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌇</h1>
         <div id="stored-text-1-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-2">
+<form class="modal-form" id="text-form-1-2">
             <input type="text" id="text-input-1-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -482,10 +494,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-3" class="modal" title="𝌈 Note 3">
     <div class="modal-content" id="modal-content-1-3">
         <span class="modal-close-button" id="modal-close-button-1-3">&times;</span>
-          <h1>𝌈</h1>
+          <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌈</h1>
         <div id="stored-text-1-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-3">
+<form class="modal-form" id="text-form-1-3">
             <input type="text" id="text-input-1-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -496,10 +507,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-4" class="modal" title="𝌉 Note 4">
     <div class="modal-content" id="modal-content-1-4">
         <span class="modal-close-button" id="modal-close-button-1-4">&times;</span>
-        <h1>𝌉</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌉</h1>
         <div id="stored-text-1-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-4">
+<form class="modal-form" id="text-form-1-4">
             <input type="text" id="text-input-1-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -510,10 +520,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-5" class="modal" title="𝌊 Note 5">
     <div class="modal-content" id="modal-content-1-5">
         <span class="modal-close-button" id="modal-close-button-1-5">&times;</span>
-        <h1>𝌊</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌊</h1>
         <div id="stored-text-1-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-5">
+<form class="modal-form" id="text-form-1-5">
             <input type="text" id="text-input-1-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -524,10 +533,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-6" class="modal" title="𝌋 Note 6">
     <div class="modal-content" id="modal-content-1-6">
         <span class="modal-close-button" id="modal-close-button-1-6">&times;</span>
-        <h1>𝌋</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌋</h1>
         <div id="stored-text-1-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-6">
+<form class="modal-form" id="text-form-1-6">
             <input type="text" id="text-input-1-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -538,10 +546,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-7" class="modal" title="𝌌 Note 7">
     <div class="modal-content" id="modal-content-1-7">
         <span class="modal-close-button" id="modal-close-button-1-7">&times;</span>
-        <h1>𝌌</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌌</h1>
         <div id="stored-text-1-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-7">
+<form class="modal-form" id="text-form-1-7">
             <input type="text" id="text-input-1-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -552,10 +559,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-8" class="modal" title="𝌍 Note 8">
     <div class="modal-content" id="modal-content-1-8">
         <span class="modal-close-button" id="modal-close-button-1-8">&times;</span>
-        <h1>𝌍</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌍</h1>
         <div id="stored-text-1-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-8">
+<form class="modal-form" id="text-form-1-8">
             <input type="text" id="text-input-1-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -566,10 +572,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-1-9" class="modal" title="𝌎 Note 9">
     <div class="modal-content" id="modal-content-1-9">
         <span class="modal-close-button" id="modal-close-button-1-9">&times;</span>
-        <h1>𝌎</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌎</h1>
         <div id="stored-text-1-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-1-9">
+<form class="modal-form" id="text-form-1-9">
             <input type="text" id="text-input-1-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -580,10 +585,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-1" class="modal" title="𝌏 Note 10">
     <div class="modal-content" id="modal-content-2-1">
         <span class="modal-close-button" id="modal-close-button-2-1">&times;</span>
-        <h1>𝌏</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌏</h1>
         <div id="stored-text-2-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-1">
+<form class="modal-form" id="text-form-2-1">
             <input type="text" id="text-input-2-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -595,10 +599,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-2" class="modal" title="𝌐 Note 11">
     <div class="modal-content" id="modal-content-2-2">
         <span class="modal-close-button" id="modal-close-button-2-2">&times;</span>
-        <h1>𝌐</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌐</h1>
         <div id="stored-text-2-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-2">
+<form class="modal-form" id="text-form-2-2">
             <input type="text" id="text-input-2-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -609,10 +612,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-3" class="modal" title="𝌑 Note 12">
     <div class="modal-content" id="modal-content-2-3">
         <span class="modal-close-button" id="modal-close-button-2-3">&times;</span>
-        <h1>𝌑</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌑</h1>
         <div id="stored-text-2-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-3">
+<form class="modal-form" id="text-form-2-3">
             <input type="text" id="text-input-2-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -623,10 +625,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-4" class="modal" title="𝌒 Note 13">
     <div class="modal-content" id="modal-content-2-4">
         <span class="modal-close-button" id="modal-close-button-2-4">&times;</span>
-        <h1>𝌒</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌒</h1>
         <div id="stored-text-2-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-4">
+<form class="modal-form" id="text-form-2-4">
             <input type="text" id="text-input-2-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -637,10 +638,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-5" class="modal" title="𝌓 Note 14">
     <div class="modal-content" id="modal-content-2-5">
         <span class="modal-close-button" id="modal-close-button-2-5">&times;</span>
-        <h1>𝌓</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌓</h1>
         <div id="stored-text-2-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-5">
+<form class="modal-form" id="text-form-2-5">
             <input type="text" id="text-input-2-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -651,10 +651,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-6" class="modal" title="𝌔 Note 15">
     <div class="modal-content" id="modal-content-2-6">
         <span class="modal-close-button" id="modal-close-button-2-6">&times;</span>
-        <h1>𝌔</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌔</h1>
         <div id="stored-text-2-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-6">
+<form class="modal-form" id="text-form-2-6">
             <input type="text" id="text-input-2-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -665,10 +664,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-7" class="modal" title="𝌕 Note 16">
     <div class="modal-content" id="modal-content-2-7">
         <span class="modal-close-button" id="modal-close-button-2-7">&times;</span>
-        <h1>𝌕</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌕</h1>
         <div id="stored-text-2-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-7">
+<form class="modal-form" id="text-form-2-7">
             <input type="text" id="text-input-2-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -679,10 +677,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-8" class="modal" title="𝌖 Note 17">
     <div class="modal-content" id="modal-content-2-8">
         <span class="modal-close-button" id="modal-close-button-2-8">&times;</span>
-        <h1>𝌖</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌖</h1>
         <div id="stored-text-2-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-8">
+<form class="modal-form" id="text-form-2-8">
             <input type="text" id="text-input-2-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -693,10 +690,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-2-9" class="modal" title="𝌘 Note 18">
     <div class="modal-content" id="modal-content-2-9">
         <span class="modal-close-button" id="modal-close-button-2-9">&times;</span>
-        <h1>𝌘</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌘</h1>
         <div id="stored-text-2-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-2-9">
+<form class="modal-form" id="text-form-2-9">
             <input type="text" id="text-input-2-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -707,10 +703,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-1" class="modal" title="𝌘 Note 19">
     <div class="modal-content" id="modal-content-3-1">
         <span class="modal-close-button" id="modal-close-button-3-1">&times;</span>
-        <h1>𝌘</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌘</h1>
         <div id="stored-text-3-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-1">
+<form class="modal-form" id="text-form-3-1">
             <input type="text" id="text-input-3-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -721,10 +716,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-2" class="modal" title="𝌙 Note 20">
     <div class="modal-content" id="modal-content-3-2">
         <span class="modal-close-button" id="modal-close-button-3-2">&times;</span>
-        <h1>𝌙</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌙</h1>
         <div id="stored-text-3-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-2">
+<form class="modal-form" id="text-form-3-2">
             <input type="text" id="text-input-3-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -735,10 +729,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-3" class="modal" title="𝌚 Note 21">
     <div class="modal-content" id="modal-content-3-3">
         <span class="modal-close-button" id="modal-close-button-3-3">&times;</span>
-        <h1>𝌚</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌚</h1>
         <div id="stored-text-3-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-3">
+<form class="modal-form" id="text-form-3-3">
             <input type="text" id="text-input-3-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -749,10 +742,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-4" class="modal" title="𝌛 Note 22">
     <div class="modal-content" id="modal-content-3-4">
         <span class="modal-close-button" id="modal-close-button-3-4">&times;</span>
-        <h1>𝌛</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌛</h1>
         <div id="stored-text-3-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-4">
+<form class="modal-form" id="text-form-3-4">
             <input type="text" id="text-input-3-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -763,10 +755,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-5" class="modal" title="𝌜 Note 23">
     <div class="modal-content" id="modal-content-3-5">
         <span class="modal-close-button" id="modal-close-button-3-5">&times;</span>
-        <h1>𝌜</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌜</h1>
         <div id="stored-text-3-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-5">
+<form class="modal-form" id="text-form-3-5">
             <input type="text" id="text-input-3-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -777,10 +768,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-6" class="modal" title="𝌝 Note 24">
     <div class="modal-content" id="modal-content-3-6">
         <span class="modal-close-button" id="modal-close-button-3-6">&times;</span>
-        <h1>𝌝</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌝</h1>
         <div id="stored-text-3-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-6">
+<form class="modal-form" id="text-form-3-6">
             <input type="text" id="text-input-3-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -791,10 +781,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-7" class="modal" title="𝌞 Note 25">
     <div class="modal-content" id="modal-content-3-7">
         <span class="modal-close-button" id="modal-close-button-3-7">&times;</span>
-        <h1>𝌞</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌞</h1>
         <div id="stored-text-3-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-7">
+<form class="modal-form" id="text-form-3-7">
             <input type="text" id="text-input-3-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -805,10 +794,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-8" class="modal" title="𝌟 Note 26">
     <div class="modal-content" id="modal-content-3-8">
         <span class="modal-close-button" id="modal-close-button-3-8">&times;</span>
-        <h1>𝌟</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌟</h1>
         <div id="stored-text-3-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-8">
+<form class="modal-form" id="text-form-3-8">
             <input type="text" id="text-input-3-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -819,10 +807,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-3-9" class="modal" title="𝌠 Note 27">
     <div class="modal-content" id="modal-content-3-9">
         <span class="modal-close-button" id="modal-close-button-3-9">&times;</span>
-        <h1>𝌠</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌠</h1>
         <div id="stored-text-3-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-3-9">
+<form class="modal-form" id="text-form-3-9">
             <input type="text" id="text-input-3-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -833,10 +820,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-1" class="modal" title="𝌡 Note 28">
     <div class="modal-content" id="modal-content-4-1">
         <span class="modal-close-button" id="modal-close-button-4-1">&times;</span>
-        <h1>𝌡</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌡</h1>
         <div id="stored-text-4-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-1">
+<form class="modal-form" id="text-form-4-1">
             <input type="text" id="text-input-4-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -847,10 +833,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-2" class="modal" title="𝌢 Note 29">
     <div class="modal-content" id="modal-content-4-2">
         <span class="modal-close-button" id="modal-close-button-4-2">&times;</span>
-        <h1>𝌢</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌢</h1>
         <div id="stored-text-4-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-2">
+<form class="modal-form" id="text-form-4-2">
             <input type="text" id="text-input-4-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -861,10 +846,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-3" class="modal" title="𝌣 Note 30">
     <div class="modal-content" id="modal-content-4-3">
         <span class="modal-close-button" id="modal-close-button-4-3">&times;</span>
-        <h1>𝌣</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌣</h1>
         <div id="stored-text-4-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-3">
+<form class="modal-form" id="text-form-4-3">
             <input type="text" id="text-input-4-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -875,10 +859,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-4" class="modal" title="𝌤 Note 31">
     <div class="modal-content" id="modal-content-4-4">
         <span class="modal-close-button" id="modal-close-button-4-4">&times;</span>
-        <h1>𝌤</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌤</h1>
         <div id="stored-text-4-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-4">
+<form class="modal-form" id="text-form-4-4">
             <input type="text" id="text-input-4-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -889,10 +872,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-5" class="modal" title="𝌥 Note 32">
     <div class="modal-content" id="modal-content-4-5">
         <span class="modal-close-button" id="modal-close-button-4-5">&times;</span>
-        <h1>𝌥</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌥</h1>
         <div id="stored-text-4-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-5">
+<form class="modal-form" id="text-form-4-5">
             <input type="text" id="text-input-4-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -903,10 +885,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-6" class="modal" title="𝌦 Note 33">
     <div class="modal-content" id="modal-content-4-6">
         <span class="modal-close-button" id="modal-close-button-4-6">&times;</span>
-        <h1>𝌦</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌦</h1>
         <div id="stored-text-4-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-6">
+<form class="modal-form" id="text-form-4-6">
             <input type="text" id="text-input-4-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -917,10 +898,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-7" class="modal" title="𝌧 Note 34">
     <div class="modal-content" id="modal-content-4-7">
         <span class="modal-close-button" id="modal-close-button-4-7">&times;</span>
-        <h1>𝌧</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌧</h1>
         <div id="stored-text-4-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-7">
+<form class="modal-form" id="text-form-4-7">
             <input type="text" id="text-input-4-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -931,10 +911,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-8" class="modal" title="𝌨 Note 35">
     <div class="modal-content" id="modal-content-4-8">
         <span class="modal-close-button" id="modal-close-button-4-8">&times;</span>
-        <h1>𝌨</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌨</h1>
         <div id="stored-text-4-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-8">
+<form class="modal-form" id="text-form-4-8">
             <input type="text" id="text-input-4-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -945,10 +924,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-4-9" class="modal" title="𝌩 Note 36">
     <div class="modal-content" id="modal-content-4-9">
         <span class="modal-close-button" id="modal-close-button-4-9">&times;</span>
-        <h1>𝌩</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌩</h1>
         <div id="stored-text-4-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-4-9">
+<form class="modal-form" id="text-form-4-9">
             <input type="text" id="text-input-4-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -959,10 +937,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-1" class="modal" title="𝌪 Note 37">
     <div class="modal-content" id="modal-content-5-1">
         <span class="modal-close-button" id="modal-close-button-5-1">&times;</span>
-        <h1>𝌪</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌪</h1>
         <div id="stored-text-5-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-1">
+<form class="modal-form" id="text-form-5-1">
             <input type="text" id="text-input-5-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -973,10 +950,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-2" class="modal" title="𝌫 Note 38">
     <div class="modal-content" id="modal-content-5-2">
         <span class="modal-close-button" id="modal-close-button-5-2">&times;</span>
-        <h1>𝌫</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌫</h1>
         <div id="stored-text-5-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-2">
+<form class="modal-form" id="text-form-5-2">
             <input type="text" id="text-input-5-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -987,10 +963,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-3" class="modal" title="𝌬 Note 39">
     <div class="modal-content" id="modal-content-5-3">
         <span class="modal-close-button" id="modal-close-button-5-3">&times;</span>
-        <h1>𝌬</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌬</h1>
         <div id="stored-text-5-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-3">
+<form class="modal-form" id="text-form-5-3">
             <input type="text" id="text-input-5-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1001,10 +976,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-4" class="modal" title="𝌭 Note 40">
     <div class="modal-content" id="modal-content-5-4">
         <span class="modal-close-button" id="modal-close-button-5-4">&times;</span>
-        <h1>𝌭</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌭</h1>
         <div id="stored-text-5-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-4">
+<form class="modal-form" id="text-form-5-4">
             <input type="text" id="text-input-5-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1015,10 +989,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-5" class=" modal" title="𝌮 Note 41">
     <div class="modal-content" id="modal-content-5-5">
         <span class="modal-close-button" id="modal-close-button-5-5">&times;</span>
-        <h1>𝌮</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌮</h1>
         <div id="stored-text-5-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-5">
+<form class="modal-form" id="text-form-5-5">
             <input type="text" id="text-input-5-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1029,10 +1002,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-6" class="modal" title="𝌯 Note 42">
     <div class="modal-content" id="modal-content-5-6">
         <span class="modal-close-button" id="modal-close-button-5-6">&times;</span>
-        <h1>𝌯</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌯</h1>
         <div id="stored-text-5-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-6">
+<form class="modal-form" id="text-form-5-6">
             <input type="text" id="text-input-5-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1043,10 +1015,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-7" class="modal" title="𝌰 Note 43">
     <div class="modal-content" id="modal-content-5-7">
         <span class="modal-close-button" id="modal-close-button-5-7">&times;</span>
-        <h1>𝌰</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌰</h1>
         <div id="stored-text-5-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-7">
+<form class="modal-form" id="text-form-5-7">
             <input type="text" id="text-input-5-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1057,10 +1028,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-8" class="modal" title="𝌱 Note 44">
     <div class="modal-content" id="modal-content-5-8">
         <span class="modal-close-button" id="modal-close-button-5-8">&times;</span>
-        <h1>𝌱</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌱</h1>
         <div id="stored-text-5-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-8">
+<form class="modal-form" id="text-form-5-8">
             <input type="text" id="text-input-5-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1071,10 +1041,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-5-9" class="modal" title="𝌲 Note 45">
     <div class="modal-content" id="modal-content-5-9">
         <span class="modal-close-button" id="modal-close-button-5-9">&times;</span>
-        <h1>𝌲</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌲</h1>
         <div id="stored-text-5-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-5-9">
+<form class="modal-form" id="text-form-5-9">
             <input type="text" id="text-input-5-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1085,10 +1054,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-1" class="modal" title="𝌳 Note 46">
     <div class="modal-content" id="modal-content-6-1">
         <span class="modal-close-button" id="modal-close-button-6-1">&times;</span>
-        <h1>𝌳</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌳</h1>
         <div id="stored-text-6-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-1">
+<form class="modal-form" id="text-form-6-1">
             <input type="text" id="text-input-6-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1099,10 +1067,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-2" class="modal" title="𝌴 Note 47">
     <div class="modal-content" id="modal-content-6-2">
         <span class="modal-close-button" id="modal-close-button-6-2">&times;</span>
-        <h1>𝌴</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌴</h1>
         <div id="stored-text-6-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-2">
+<form class="modal-form" id="text-form-6-2">
             <input type="text" id="text-input-6-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1113,10 +1080,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-3" class="modal" title="𝌵 Note 48">
     <div class="modal-content" id="modal-content-6-3">
         <span class="modal-close-button" id="modal-close-button-6-3">&times;</span>
-        <h1>𝌵</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌵</h1>
         <div id="stored-text-6-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-3">
+<form class="modal-form" id="text-form-6-3">
             <input type="text" id="text-input-6-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1127,10 +1093,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-4" class="modal" title="𝌶 Note 49">
     <div class="modal-content" id="modal-content-6-4">
         <span class="modal-close-button" id="modal-close-button-6-4">&times;</span>
-        <h1>𝌶</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌶</h1>
         <div id="stored-text-6-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-4">
+<form class="modal-form" id="text-form-6-4">
             <input type="text" id="text-input-6-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1141,10 +1106,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-5" class="modal" title="𝌷 Note 50">
     <div class="modal-content" id="modal-content-6-5">
         <span class="modal-close-button" id="modal-close-button-6-5">&times;</span>
-        <h1>𝌷</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌷</h1>
         <div id="stored-text-6-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-5">
+<form class="modal-form" id="text-form-6-5">
             <input type="text" id="text-input-6-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1155,10 +1119,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-6" class="modal" title="𝌸 Note 51">
     <div class="modal-content" id="modal-content-6-6">
         <span class="modal-close-button" id="modal-close-button-6-6">&times;</span>
-        <h1>𝌸</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌸</h1>
         <div id="stored-text-6-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-6">
+<form class="modal-form" id="text-form-6-6">
             <input type="text" id="text-input-6-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1169,10 +1132,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-7" class="modal" title="𝌹 Note 52">
     <div class="modal-content" id="modal-content-6-7">
         <span class="modal-close-button" id="modal-close-button-6-7">&times;</span>
-        <h1>𝌹</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌹</h1>
         <div id="stored-text-6-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-7">
+<form class="modal-form" id="text-form-6-7">
             <input type="text" id="text-input-6-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1183,10 +1145,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-8" class=" modal" title="𝌺 Note 53">
     <div class="modal-content" id="modal-content-6-8">
         <span class="modal-close-button" id="modal-close-button-6-8">&times;</span>
-        <h1>𝌺</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌺</h1>
         <div id="stored-text-6-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-8">
+<form class="modal-form" id="text-form-6-8">
             <input type="text" id="text-input-6-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1197,10 +1158,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-6-9" class="modal" title="𝌻 Note 54">
     <div class="modal-content" id="modal-content-6-9">
         <span class="modal-close-button" id="modal-close-button-6-9">&times;</span>
-        <h1>𝌻</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌻</h1>
         <div id="stored-text-6-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-6-9">
+<form class="modal-form" id="text-form-6-9">
             <input type="text" id="text-input-6-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1211,10 +1171,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-1" class="modal" title="𝌼 Note 55">
     <div class="modal-content" id="modal-content-7-1">
         <span class="modal-close-button" id="modal-close-button-7-1">&times;</span>
-        <h1>𝌼</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌼</h1>
         <div id="stored-text-7-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-1">
+<form class="modal-form" id="text-form-7-1">
             <input type="text" id="text-input-7-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1225,10 +1184,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-2" class="modal" title="𝌽 Note 56">
     <div class="modal-content" id="modal-content-7-2">
         <span class="modal-close-button" id="modal-close-button-7-2">&times;</span>
-        <h1>𝌽</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌽</h1>
         <div id="stored-text-7-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-2">
+<form class="modal-form" id="text-form-7-2">
             <input type="text" id="text-input-7-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1239,10 +1197,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-3" class="modal" title="𝌾 Note 57">
     <div class="modal-content" id="modal-content-7-3">
         <span class="modal-close-button" id="modal-close-button-7-3">&times;</span>
-        <h1>𝌾</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌾</h1>
         <div id="stored-text-7-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-3">
+<form class="modal-form" id="text-form-7-3">
             <input type="text" id="text-input-7-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1253,10 +1210,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-4" class="modal" title="𝌿 Note 58">
     <div class="modal-content" id="modal-content-7-4">
         <span class="modal-close-button" id="modal-close-button-7-4">&times;</span>
-        <h1>𝌿</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝌿</h1>
         <div id="stored-text-7-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-4">
+<form class="modal-form" id="text-form-7-4">
             <input type="text" id="text-input-7-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1267,10 +1223,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-5" class="modal" title="𝍀 Note 59">
     <div class="modal-content" id="modal-content-7-5">
         <span class="modal-close-button" id="modal-close-button-7-5">&times;</span>
-        <h1>𝍀</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍀</h1>
         <div id="stored-text-7-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-5">
+<form class="modal-form" id="text-form-7-5">
             <input type="text" id="text-input-7-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1281,10 +1236,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-6" class="modal" title="𝍁 Note 60">
     <div class="modal-content" id="modal-content-7-6">
         <span class="modal-close-button" id="modal-close-button-7-6">&times;</span>
-        <h1>𝍁</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍁</h1>
         <div id="stored-text-7-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-6">
+<form class="modal-form" id="text-form-7-6">
             <input type="text" id="text-input-7-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1295,10 +1249,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-7" class="modal" title="𝍂 Note 61">
     <div class="modal-content" id="modal-content-7-7">
         <span class="modal-close-button" id="modal-close-button-7-7">&times;</span>
-        <h1>𝍂</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍂</h1>
         <div id="stored-text-7-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-7">
+<form class="modal-form" id="text-form-7-7">
             <input type="text" id="text-input-7-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1309,10 +1262,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-8" class="modal" title="𝍃 Note 62">
     <div class="modal-content" id="modal-content-7-8">
         <span class="modal-close-button" id="modal-close-button-7-8">&times;</span>
-        <h1>𝍃</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍃</h1>
         <div id="stored-text-7-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-8">
+<form class="modal-form" id="text-form-7-8">
             <input type="text" id="text-input-7-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1323,10 +1275,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-7-9" class="modal" title="𝍄 Note 63">
     <div class="modal-content" id="modal-content-7-9">
         <span class="modal-close-button" id="modal-close-button-7-9">&times;</span>
-        <h1>𝍄</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍄</h1>
         <div id="stored-text-7-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-7-9">
+<form class="modal-form" id="text-form-7-9">
             <input type="text" id="text-input-7-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1337,10 +1288,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-1" class="modal" title="𝍅 Note 64">
     <div class="modal-content" id="modal-content-8-1">
         <span class="modal-close-button" id="modal-close-button-8-1">&times;</span>
-        <h1>𝍅</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍅</h1>
         <div id="stored-text-8-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-1">
+<form class="modal-form" id="text-form-8-1">
             <input type="text" id="text-input-8-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1351,10 +1301,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-2" class="modal" title="𝍆 Note 65">
     <div class="modal-content" id="modal-content-8-2">
         <span class="modal-close-button" id="modal-close-button-8-2">&times;</span>
-        <h1>𝍆</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍆</h1>
         <div id="stored-text-8-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-2">
+<form class="modal-form" id="text-form-8-2">
             <input type="text" id="text-input-8-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1365,10 +1314,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-3" class="modal" title="𝍇 Note 66">
     <div class="modal-content" id="modal-content-8-3">
         <span class="modal-close-button" id="modal-close-button-8-3">&times;</span>
-        <h1>𝍇</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍇</h1>
         <div id="stored-text-8-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-3">
+<form class="modal-form" id="text-form-8-3">
             <input type="text" id="text-input-8-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1379,10 +1327,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-4" class="modal" title="𝍈 Note 67">
     <div class="modal-content" id="modal-content-8-4">
         <span class="modal-close-button" id="modal-close-button-8-4">&times;</span>
-        <h1>𝍈</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍈</h1>
         <div id="stored-text-8-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-4">
+<form class="modal-form" id="text-form-8-4">
             <input type="text" id="text-input-8-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1393,10 +1340,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-5" class=" modal" title="𝍉 Note 68">
     <div class="modal-content" id="modal-content-8-5">
         <span class="modal-close-button" id="modal-close-button-8-5">&times;</span>
-        <h1>𝍉</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍉</h1>
         <div id="stored-text-8-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-5">
+<form class="modal-form" id="text-form-8-5">
             <input type="text" id="text-input-8-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1407,10 +1353,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-6" class="modal" title="𝍊 Note 69">
     <div class="modal-content" id="modal-content-8-6">
         <span class="modal-close-button" id="modal-close-button-8-6">&times;</span>
-        <h1>𝍊</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍊</h1>
         <div id="stored-text-8-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-6">
+<form class="modal-form" id="text-form-8-6">
             <input type="text" id="text-input-8-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1421,10 +1366,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-7" class="modal" title="𝍋 Note 70">
     <div class="modal-content" id="modal-content-8-7">
         <span class="modal-close-button" id="modal-close-button-8-7">&times;</span>
-        <h1>𝍋</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍋</h1>
         <div id="stored-text-8-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-7">
+<form class="modal-form" id="text-form-8-7">
             <input type="text" id="text-input-8-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1435,10 +1379,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-8" class="modal" title="𝍌 Note 71">
     <div class="modal-content" id="modal-content-8-8">
         <span class="modal-close-button" id="modal-close-button-8-8">&times;</span>
-        <h1>𝍌</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍌</h1>
         <div id="stored-text-8-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-8">
+<form class="modal-form" id="text-form-8-8">
             <input type="text" id="text-input-8-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1449,10 +1392,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-8-9" class="modal" title="𝍍 Note 72">
     <div class="modal-content" id="modal-content-8-9">
         <span class="modal-close-button" id="modal-close-button-8-9">&times;</span>
-        <h1>𝍍</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍍</h1>
         <div id="stored-text-8-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-8-9">
+<form class="modal-form" id="text-form-8-9">
             <input type="text" id="text-input-8-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1463,10 +1405,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-1" class="modal" title="𝍎 Note 73">
     <div class="modal-content" id="modal-content-9-1">
         <span class="modal-close-button" id="modal-close-button-9-1">&times;</span>
-        <h1>𝍎</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍎</h1>
         <div id="stored-text-9-1"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-1">
+<form class="modal-form" id="text-form-9-1">
             <input type="text" id="text-input-9-1" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1477,10 +1418,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-2" class="modal" title="𝍏 Note 74">
     <div class="modal-content" id="modal-content-9-2">
         <span class="modal-close-button" id="modal-close-button-9-2">&times;</span>
-        <h1>𝍏</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍏</h1>
         <div id="stored-text-9-2"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-2">
+<form class="modal-form" id="text-form-9-2">
             <input type="text" id="text-input-9-2" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1491,10 +1431,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-3" class="modal" title="𝍐 Note 75">
     <div class="modal-content" id="modal-content-9-3">
         <span class="modal-close-button" id="modal-close-button-9-3">&times;</span>
-        <h1>𝍐</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍐</h1>
         <div id="stored-text-9-3"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-3">
+<form class="modal-form" id="text-form-9-3">
             <input type="text" id="text-input-9-3" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1505,10 +1444,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-4" class="modal" title="𝍑 Note 76">
     <div class="modal-content" id="modal-content-9-4">
         <span class="modal-close-button" id="modal-close-button-9-4">&times;</span>
-        <h1>𝍑</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍑</h1>
         <div id="stored-text-9-4"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-4">
+<form class="modal-form" id="text-form-9-4">
             <input type="text" id="text-input-9-4" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1519,10 +1457,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-5" class="modal" title="𝍒 Note 77">
     <div class="modal-content" id="modal-content-9-5">
         <span class="modal-close-button" id="modal-close-button-9-5">&times;</span>
-        <h1>𝍒</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍒</h1>
         <div id="stored-text-9-5"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-5">
+<form class="modal-form" id="text-form-9-5">
             <input type="text" id="text-input-9-5" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1533,10 +1470,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-6" class="modal" title="𝍓 Note 78">
     <div class="modal-content" id="modal-content-9-6">
         <span class="modal-close-button" id="modal-close-button-9-6">&times;</span>
-        <h1>𝍓</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍓</h1>
         <div id="stored-text-9-6"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-6">
+<form class="modal-form" id="text-form-9-6">
             <input type="text" id="text-input-9-6" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1547,10 +1483,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-7" class="modal" title="𝍔 Note 79">
     <div class="modal-content" id="modal-content-9-7">
         <span class="modal-close-button" id="modal-close-button-9-7">&times;</span>
-        <h1>𝍔</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍔</h1>
         <div id="stored-text-9-7"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-7">
+<form class="modal-form" id="text-form-9-7">
             <input type="text" id="text-input-9-7" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1561,10 +1496,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-8" class=" modal" title="𝍕 Note 80">
     <div class="modal-content" id="modal-content-9-8">
         <span class="modal-close-button" id="modal-close-button-9-8">&times;</span>
-        <h1>𝍕</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍕</h1>
         <div id="stored-text-9-8"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-8">
+<form class="modal-form" id="text-form-9-8">
             <input type="text" id="text-input-9-8" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
@@ -1575,10 +1509,9 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="dialog-9-9" class="modal" title="𝍖 Note 81">
     <div class="modal-content" id="modal-content-9-9">
         <span class="modal-close-button" id="modal-close-button-9-9">&times;</span>
-        <h1>𝍖</h1>
+        <h1 class="toggle-form"  onclick="toggleForm(this)" style="cursor: pointer; font-size: 40px; ">𝍖</h1>
         <div id="stored-text-9-9"></div>
-        <h4>Update Note</h4>
-        <form class="modal-form" id="text-form-9-9">
+<form class="modal-form" id="text-form-9-9">
             <input type="text" id="text-input-9-9" placeholder="Enter note" required>
             <br>
             <button type="submit">Submit</button>
