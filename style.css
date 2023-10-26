@@ -84,6 +84,15 @@ html, body {
 .ui-dialog .ui-dialog-titlebar .custom-close-button:hover {
     color: red;
 }
+
+.ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button{
+    margin-top:10px!important;
+    margin-bottom:10px!important;
+}
+
+.ui-dialog .ui-dialog-titlebar .ui-button{
+    display:inherit!important;
+}
    .modal {
     display: block;
     position: absolute;
@@ -114,6 +123,12 @@ html, body {
     cursor: pointer!important;
    }
 
+   .toggle-form{
+    position:relative!important;
+    top:-30px!important;
+    margin-bottom:0px!important;
+   }
+
    #dialog > div{
     min-height:420px;
     width:80%;
@@ -137,8 +152,23 @@ html, body {
     background:none;
     backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
     color:#fff!important;
-    line-height:40px!important;
+    line-height:25px!important;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.5) transparent; /* Black and 50% transparent */
+    margin-bottom:15px!important;
    }
+   
+    .ui-widget-content::-webkit-scrollbar {
+        width: 8px; /* Adjust this value for the desired slimness */
+    }
+
+    .ui-widget-content::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.5); /* Thumb color (50% transparent black) */
+    }
+
+    .ui-widget-content::-webkit-scrollbar-thumb:hover {
+        background: #000; /* Thumb color on hover (black) */
+    }
    .ui-dialog .ui-dialog-buttonpane{
     border-width:0px;
    }
@@ -171,12 +201,12 @@ html, body {
 
         /* Style for the close button */
         .modal-close-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            color:#fff;
-            font-size:36px;
+            display:none;
+        }
+
+        .ui-dialog .ui-dialog-titlebar-close{
+            top:0px!important;
+            right:10px!important;
         }
 
         .ui-dialog-buttonpane{display:none;}
