@@ -101,12 +101,17 @@ html, body {
     display: none;
    }
    .modal-form {
+    display:none;
     text-align: center;
 }
 
    .modal.show {
     display: block;
     opacity: 1;
+   }
+
+   #modal-content .toggle-form{
+    cursor: pointer!important;
    }
 
    #dialog > div{
@@ -132,6 +137,7 @@ html, body {
     background:none;
     backdrop-filter: blur(10px); /* Adjust the blur amount as needed */
     color:#fff!important;
+    line-height:40px!important;
    }
    .ui-dialog .ui-dialog-buttonpane{
     border-width:0px;
